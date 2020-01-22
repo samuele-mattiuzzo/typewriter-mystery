@@ -1,0 +1,40 @@
+*{
+    font-family: "Lucida Typewriter";
+    font-size: 14px;
+    text-align: center;   
+}
+
+.drawTitle {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+
+.drawArea,
+.originalText {
+    margin: 0 auto;
+}
+
+.drawArea,
+code {
+    display: block;
+    padding: 20px 10px;
+    text-align: left;
+    width: 60%
+}
+code {
+    background-color: #eee;
+    border: 1px solid #999;
+}
+
+.drawArea {
+    display: none;
+    white-space: nowrap; /* Keeps the content on a single line */
+    letter-spacing: .50em;
+    font-weight: bolder;
+}
+
+span.l { color: #665166; }
+span.s { color: #100; }
+span.o { color: #16474E; }
