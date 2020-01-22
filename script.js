@@ -57,8 +57,6 @@ $(document).ready(function(){
                 // other line types ---, ```, * etc are ignored
                 // TODO: parse the source line into a clickable link
             });
-
-            $("drawArea").html(output);
         }
     });
 
