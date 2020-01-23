@@ -17,7 +17,12 @@
     width: 100%;
 }
 
-#grid-container > header { grid-area: head; }
+#grid-container > header { 
+    grid-area: head;
+    background: url(/img/typewriter_mystery_head_logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
 #grid-container > nav { grid-area: nav; }
 #grid-container > main { grid-area: main; }
 

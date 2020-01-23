@@ -33,11 +33,6 @@ function processLine(line) {
 function solvePattern(instructions) {
     // line by line check
     instructions.forEach(element => {
-        if (/^\# /.test(element)) {
-            // this line contains the journal's title
-            $("#drawTitle").html(element.replace("# ", ""));
-        }
-
         if (/^\d+\--/.test(element)) {
             // if it starts with 1-- .. 10-- etc. it's a pattern line
             var cleaned = element.split("--")[1].trim();
@@ -65,7 +60,6 @@ function loadPattern(filename) {
 
 $(document).ready(function(){
 
-    //$("#navMenu")
     $("li.nav a").on("click", function(evt) {
         evt.preventDefault();
         var origin = evt.target.origin,
