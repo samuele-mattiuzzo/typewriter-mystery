@@ -57,6 +57,7 @@ function loadPattern(filename) {
             $( "#error" ).html( msg + xhr.status + " " + xhr.statusText );
         } else {
             var instructions = response.split("\n");
+            $(drawArea).append('');
             solvePattern(instructions);
         }
     });
@@ -72,13 +73,17 @@ $(document).ready(function(){
             text = evt.target.text,
             filename = fullUrl.replace(origin, "");
 
-        if (/\/\d+.md/.test(filename)) {
-            $("#drawTitle").html(text);
+        if (/\/\d+.txt/.test(filename)) {
+            $("#viewer").toggle(false);
+            $("#about").toggle(false);
+            $("#sectionTitle").html(text);
             loadPattern(filename);
+            $("#viewer").toggle(true);
         } else {
-            if (/\/about/.test(filename)) {
-                $("#drawTitle").html("ABOUT TYPEWRITER MYSTERIES");
-                $("#originalText").html("Something write here!")
+            if (/about/.test(filename)) {
+                $("#viewer").toggle(false);
+                $("#sectionTitle").html("ABOUT TYPEWRITER MYSTERIES");
+                $("#about").toggle(true);
             }
         }
     });
