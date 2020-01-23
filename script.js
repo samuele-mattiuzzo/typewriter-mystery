@@ -30,39 +30,62 @@ function processLine(line) {
     return output;
 }
 
-$(document).ready(function(){
+function solvePattern(instructions) {
+    // line by line check
+    instructions.forEach(element => {
+        if (/^\# /.test(element)) {
+            // this line contains the journal's title
+            $("#drawTitle").html(element.replace("# ", ""));
+        }
 
-    $("#originalText").load("/patterns/0001.md", function(response, status, xhr) {
+        if (/^\d+\--/.test(element)) {
+            // if it starts with 1-- .. 10-- etc. it's a pattern line
+            var cleaned = element.split("--")[1].trim();
+            if(cleaned.length) {
+                $(drawArea).append(processLine(cleaned));
+            }
+        }
+        // other line types ---, ```, * etc are ignored
+        // TODO: parse the source line into a clickable link
+    });
+}
+
+function loadPattern(filename) {
+    $("#originalText").load(filename, function(response, status, xhr) {
         if ( status == "error" ) {
             var msg = "Sorry but there was an error: ";
             $( "#error" ).html( msg + xhr.status + " " + xhr.statusText );
         } else {
-            var lines = response.split("\n"),
-                output = '';
+            var instructions = response.split("\n");
+            solvePattern(instructions);
+        }
+    });
+}
 
-            // line by line check
-            lines.forEach(element => {
-                if (/^\# /.test(element)) {
-                    // this line contains the journal's title
-                    $("#drawTitle").html(element.replace("# ", ""));
-                }
+$(document).ready(function(){
 
-                if (/^\d+\--/.test(element)) {
-                    // if it starts with 1-- .. 10-- etc. it's a pattern line
-                    var cleaned = element.split("--")[1].trim();
-                    if(cleaned.length) {
-                        $(drawArea).append(processLine(cleaned));
-                    }
-                }
-                // other line types ---, ```, * etc are ignored
-                // TODO: parse the source line into a clickable link
-            });
+    //$("#navMenu")
+    $("li.nav a").on("click", function(evt) {
+        evt.preventDefault();
+        var origin = evt.target.origin,
+            fullUrl = evt.target.href,
+            text = evt.target.text,
+            filename = fullUrl.replace(origin, "");
+
+        if (/\/\d+.md/.test(filename)) {
+            $("#drawTitle").html(text);
+            loadPattern(filename);
+        } else {
+            if (/\/about/.test(filename)) {
+                $("#drawTitle").html("ABOUT TYPEWRITER MYSTERIES");
+                $("#originalText").html("Something write here!")
+            }
         }
     });
 
     // show/hide the solution
     $("#toggler").on("click", function() {
-        $("#originalText").toggle("slow");
-        $("#drawArea").toggle("slow");
+        $("#originalText").toggle();
+        $("#drawArea").toggle();
     });
 })

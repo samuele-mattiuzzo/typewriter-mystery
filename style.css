@@ -4,6 +4,23 @@
     text-align: center;   
 }
 
+#grid-container {
+    display: grid;
+    width: 100%;
+    grid-template-areas: "head head"
+                         "head head"
+                         "head head"
+                         "nav  main"
+                         "nav  main";
+    grid-template-rows: 50px 1fr 30px;
+    grid-template-columns: 150px 1fr;
+}
+
+#grid-container > header { grid-area: head; }
+#grid-container > nav { grid-area: nav; }
+#grid-container > main { grid-area: main; }
+
+
 .drawTitle {
     font-weight: bold;
     font-size: 20px;
@@ -38,3 +55,8 @@ code {
 span.l { color: #665166; }
 span.s { color: #100; }
 span.o { color: #16474E; }
+
+ul, ol, li {
+    list-style-type: none;
+    text-align: left;
+}
