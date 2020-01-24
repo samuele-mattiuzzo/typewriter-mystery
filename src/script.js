@@ -62,6 +62,7 @@ $(document).ready(function(){
 
     $("li.nav a").on("click", function(evt) {
         evt.preventDefault();
+        
         var origin = evt.target.origin,
             fullUrl = evt.target.href,
             text = evt.target.text,

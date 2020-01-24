@@ -23,12 +23,9 @@
                 <!-- the left menu -->
                 <ul>
                     <li class="nav"><a href="about">About</a></li>
-                    <li>Curated
-                        <ul>
-                            <li class="nav"><a href="/patterns/0001.txt">
-                                The Journal of Business Education, volume 33, 1957 - Issue 1</a>
-                            </li>
-                        </ul>
+                    
+                    <li>Patterns list
+                        <ul>{ nav_items }</ul>
                     </li>
                 </ul>
             </nav>
@@ -37,15 +34,11 @@
                 <!-- the main content -->
                 <h3 id="section-title">ABOUT TYPEWRITER MYSTERIES</h3>
 
-                <div class="section-content" id="about">
+                <div class="section-content static" id="about">
                     This is an about text
                 </div>
 
-                <div class="section-content" id="viewer">
-                    <a href="#" id="toggler">toggle solution</a>
-                    <pre><code class="original" id="original"></code></pre>
-                    <div class="solution" id="solution"></div>
-                </div>           
+                { original_snippets }         
             </main>
         </section>
         

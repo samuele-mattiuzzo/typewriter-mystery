@@ -1,3 +1,2 @@
-# Original
-# Curated
-- [The Journal of Business Education, volume 33, 1957 - Issue 1](/patterns/0001.txt)
+# List
+- [The Journal of Business Education, volume 33, 1957 - Issue 1](/patterns/1.txt)
