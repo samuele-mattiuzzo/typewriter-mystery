@@ -6,8 +6,9 @@ clean:
 
 build:
 	echo "Building"
-	cd src
-	python3 compile.py
+	cd ./src; \
+	rm _index.html; \
+	python3 compile.py; \
 	cd ..
 
 merge_in_pages:
@@ -25,12 +26,12 @@ merge_in_pages:
 	git reset -- patterns
 	git commit
 
-pages:
-	clean build merge_in_pages
-
 runserver:
 	python3 -m http.server
 
 local:
 	clean build runserver
+
+pages:
+	clean build merge_in_pages
 
