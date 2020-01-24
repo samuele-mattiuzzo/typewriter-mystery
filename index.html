@@ -9,6 +9,7 @@
         <title>Typewriter Mystery Solver</title>
         <meta name="description" content="Typewriter Mystery Solver, a simple app to solve typewriter mysteries">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:600,600i&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -16,9 +17,7 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <section id="grid-container">
-            <header>
-                <!-- the header -->
-            </header>
+            <header></header>
 
             <nav>
                 <!-- the left menu -->
@@ -26,8 +25,8 @@
                     <li class="nav"><a href="about">About</a></li>
                     <li>Curated
                         <ul>
-                            <li class="nav">
-                                <a href="/patterns/0001.txt">The Journal of Business Education, volume 33, 1957 - Issue 1</a>
+                            <li class="nav"><a href="/patterns/0001.txt">
+                                The Journal of Business Education, volume 33, 1957 - Issue 1</a>
                             </li>
                         </ul>
                     </li>
@@ -36,16 +35,16 @@
 
             <main>
                 <!-- the main content -->
-                <h3 id="sectionTitle">ABOUT TYPEWRITER MYSTERIES</h3>
+                <h3 id="section-title">ABOUT TYPEWRITER MYSTERIES</h3>
 
-                <div class="sectionContent" id="about">
+                <div class="section-content" id="about">
                     This is an about text
                 </div>
 
-                <div class="sectionContent" id="viewer">
+                <div class="section-content" id="viewer">
                     <a href="#" id="toggler">toggle solution</a>
-                    <pre><code class="originalText" id="originalText"></code></pre>
-                    <div class="drawArea" id="drawArea"></div>
+                    <pre><code class="original" id="original"></code></pre>
+                    <div class="solution" id="solution"></div>
                 </div>           
             </main>
         </section>

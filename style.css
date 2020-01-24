@@ -1,5 +1,5 @@
 *{
-    font-family: "Lucida Typewriter";
+    font-family: "Open Sans", sans-serif;
     font-size: 14px;
     text-align: center;   
 }
@@ -20,12 +20,26 @@
 #grid-container > header { 
     grid-area: head;
     background: url(/img/typewriter_mystery_head_logo.png);
+    background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
-#grid-container > nav { grid-area: nav; }
-#grid-container > main { grid-area: main; }
+#grid-container > nav {
+    grid-area: nav;
+}
 
+#grid-container > nav > ul,
+#grid-container > nav > ul > li {
+    font-size: 16px;
+    list-style-type: none;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+/* Main section */
+#grid-container > main {
+    grid-area: main;
+}
 
 #grid-container > main > h3 {
     font-weight: bold;
@@ -34,45 +48,36 @@
     text-transform: uppercase;
 }
 
-#grid-container > main > div.sectionContent {
+#grid-container > main > .section-content {
     width: 100%;
 }
 
-#viewer {
+/* The viewer section */
+#grid-container > main > #viewer {
     display: none;
 }
 
-.drawArea,
-.originalText {
+#grid-container > main > #viewer > pre > .original,
+#grid-container > main > #viewer > .solution {
     margin: 0 auto;
-}
-
-.drawArea,
-code {
     padding: 20px 10px;
     text-align: left;
     width: 60%
 }
-code {
+#grid-container > main > #viewer > pre > .original {
     background-color: #eee;
     border: 1px solid #999;
     display: block;
 }
 
-.drawArea {
+#grid-container > main > #viewer > .solution {
     display: none;
     font-weight: bolder;
     letter-spacing: .50em;
     white-space: nowrap; /* Keeps the content on a single line */
 }
 
-span.l { color: #665166; }
-span.s { color: #100; }
-span.o { color: #16474E; }
-
-ul, ol, li {
-    font-size: 16px;
-    list-style-type: none;
-    text-align: left;
-    text-transform: uppercase;
-}
+/* Letters and their colours. TODO: make them dynamic based on the problems */
+#grid-container > main > #viewer > .solution > span.l { color: #665166; }
+#grid-container > main > #viewer > .solution > span.s { color: #100; }
+#grid-container > main > #viewer > .solution > span.o { color: #16474E; }

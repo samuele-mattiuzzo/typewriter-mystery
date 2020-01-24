@@ -37,7 +37,7 @@ function solvePattern(instructions) {
             // if it starts with 1-- .. 10-- etc. it's a pattern line
             var cleaned = element.split("--")[1].trim();
             if(cleaned.length) {
-                $(drawArea).append(processLine(cleaned));
+                $("#solution").append(processLine(cleaned));
             }
         }
         // other line types ---, ```, * etc are ignored
@@ -46,13 +46,13 @@ function solvePattern(instructions) {
 }
 
 function loadPattern(filename) {
-    $("#originalText").load(filename, function(response, status, xhr) {
+    $("#original").load(filename, function(response, status, xhr) {
         if ( status == "error" ) {
             var msg = "Sorry but there was an error: ";
             $( "#error" ).html( msg + xhr.status + " " + xhr.statusText );
         } else {
             var instructions = response.split("\n");
-            $(drawArea).append('');
+            $("#solution").append('');
             solvePattern(instructions);
         }
     });
@@ -70,13 +70,13 @@ $(document).ready(function(){
         if (/\/\d+.txt/.test(filename)) {
             $("#viewer").toggle(false);
             $("#about").toggle(false);
-            $("#sectionTitle").html(text);
+            $("#section-title").html(text);
             loadPattern(filename);
             $("#viewer").toggle(true);
         } else {
             if (/about/.test(filename)) {
                 $("#viewer").toggle(false);
-                $("#sectionTitle").html("ABOUT TYPEWRITER MYSTERIES");
+                $("#section-title").html("ABOUT TYPEWRITER MYSTERIES");
                 $("#about").toggle(true);
             }
         }
@@ -84,7 +84,7 @@ $(document).ready(function(){
 
     // show/hide the solution
     $("#toggler").on("click", function() {
-        $("#originalText").toggle();
-        $("#drawArea").toggle();
+        $("#original").toggle();
+        $("#solution").toggle();
     });
 })
