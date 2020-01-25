@@ -9,6 +9,7 @@
         <title>Typewriter Mystery Solver</title>
         <meta name="description" content="Typewriter Mystery Solver, a simple app to solve typewriter mysteries">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:600,600i&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -16,38 +17,83 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <section id="grid-container">
-            <header>
-                <!-- the header -->
-                <img src="/img/typewriter_mystery_head_logo.png">
-            </header>
+            <header></header>
 
             <nav>
                 <!-- the left menu -->
                 <ul>
-                    <li class="nav"><a href="about">About</a></li>
-                    <li>Curated
-                        <ul>
-                            <li class="nav">
-                                <a href="/patterns/0001.txt">The Journal of Business Education, volume 33, 1957 - Issue 1</a>
-                            </li>
-                        </ul>
+                    <li class="nav"><a href="/about">About</a></li>
+                    
+                    <li>Patterns list
+                        <ul><li class="nav"><a href="/1">The Journal of Business Education, volume 33, 1957 - Issue 1</a></li></ul>
                     </li>
                 </ul>
             </nav>
 
             <main>
                 <!-- the main content -->
-                <h3 id="sectionTitle">ABOUT TYPEWRITER MYSTERIES</h3>
+                <h3 id="section-title">ABOUT TYPEWRITER MYSTERIES</h3>
 
-                <div class="sectionContent" id="about">
+                <div class="section-content" id="about">
                     This is an about text
                 </div>
 
-                <div class="sectionContent" id="viewer">
-                    <a href="#" id="toggler">toggle solution</a>
-                    <pre><code class="originalText" id="originalText"></code></pre>
-                    <div class="drawArea" id="drawArea"></div>
-                </div>           
+                <div class="section-content viewer" id="1">
+    <a href="/1" class="toggler">toggle solution</a>
+    <pre>
+        <code class="original" id="1-original">
+            # The Journal of Business Education, volume 33, 1957 - Issue 1
+
+```
+1--24-sp, 3-l
+2--24-sp, 3-l
+3--22-sp, 7-l
+4--18-sp, 15-l
+5--17-sp, 17-l, 4-sp, 7-l
+6--18-sp, 15-l, 3-sp, 11-l
+7--19-sp, 13-l, 2-sp, 5-l, 6-sp, 4-l
+8--19-sp, 6-l, 1-$, 10-l, 10-sp, 4-l
+9--5-l, 14-sp, 4-l, 2-$, 1-o, 2-$, 6-l, 13-sp, 4-l
+10--1-sp, 5-l, 12-sp, 4-l, 1-$, 2-o, 1-$, 4-l, 14-sp, 4-l
+11--2-sp, 5-l, 11-sp, 3-l, 2-$, 5-o, 2-$, 3-l, 14-sp, 4-l
+12--3-sp, 5-l, 10-sp, 2-l, 1-$, 4-o, 1-$, 4-o, 1-$, 2-l, 14-sp, 4-l
+13--3-sp, 5-l, 10-sp, 2-l, 1-$, 2-o, 5-$, 2-o, 1-$, 3-l, 13-sp, 4-l
+14--4-sp, 5-l, 9-sp, 1-l, 1-$, 1-o, 1-$, 2-o, 3-$, 2-o, 1-$, 1-o, 1-$, 2-l, 12-sp, 4-l
+15--4-sp, 5-l, 8-sp, 3-l, 1-$, 2-o, 5-$, 2-o, 1-$, 4-l, 11-sp, 4-l
+16--4-sp, 5-l, 8-sp, 3-l, 1-$, 4-o, 1-$, 4-o, 1-$, 4-l, 10-sp, 4-l
+17--4-sp, 6-l, 6-sp, 5-l, 2-$, 5-o, 2-$, 6-o, 8-sp, 4-l
+18--4-sp, 7-l, 4-sp, 7-l, 1-$, 2-o, 1-$, 2-o, 1-$, 8-l, 6-sp, 4-l
+19--4-sp, 12-l, 1-$, 6-l, 2-$, 1-o, 2-$, 6-l, 1-$, 3-l, 4-sp, 4-l
+20--4-sp, 10-l, 2-$, 1-o, 2-$, 6-l, 1-$, 6-l, 2-$, 1-o, 2-$, 2-l, 1-sp, 5-l
+21--4-sp, 9-l, 1-$, 2-o, 1-$, 2-o, 1-$, 11-l, 1-$, 2-o, 1-$, 2-o, 1-$, 5-l
+22--4-sp, 8-l, 2-$, 5-o, 2-$, 9-l, 2-$, 5-o, 2-$, 3-l
+23--4-sp, 7-l, 1-$, 4-o, 1-$, 4-o, 1-$, 7-l, 1-$, 4-o, 1-$, 4-o, 1-$, 1-l
+24--4-sp, 7-l, 1-$, 2-o, 5-$, 2-o, 1-$, 7-l, 1-$, 2-o, 5-$, 2-o, 1-$, 1-l
+25--5-sp, 5-l, 1-$, 1-o, 1-$, 2-o, 3-$, 2-o, 1-$, 1-o, 1-$, 5-l, 1-$, 1-o, 1-$, 2-o, 3-$, 2-o, 1-$, 1-o, 1-$, 1-l
+26--5-sp, 6-l, 1-$, 2-o, 5-$, 2-o, 1-$, 7-l, 1-$, 2-o, 5-$, 2-o, 1-$, 2-l
+27--6-sp, 5-l, 1-$, 4-o, 1-$, 4-o, 1-$, 7-l, 1-$, 4-o, 1-$, 4-o, 1-$, 2-l
+28--7-sp, 5-l, 2-$, 5-o, 2-$, 9-l, 2-$, 5-o, 2-$, 3-l
+29--7-sp, 6-l, 1-$, 2-o, 1-$, 2-o, 1-$, 11-l, 1-$, 2-o, 1-$, 2-o, 1-$, 4-l
+30--8-sp, 6-l, 2-$, 7-o, 2-$, 6-l, 1-$, 6-l, 2-$, 1-o, 2-$, 4-l
+31--9-sp, 7-l, 1-$, 6-l, 2-$, 1-o, 2-$, 6-l, 1-$, 6-l
+32--10-sp, 12-l, 1-$, 2-o, 1-$, 2-o, 1-$, 12-l
+33--11-sp, 10-l, 2-$, 5-o, 2-$, 10-l
+34--12-sp, 8-l, 1-$, 4-o, 1-$, 4-o, 1-$, 8-l
+35--14-sp, 6-l, 1-$, 2-o, 5-$, 2-o, 1-$, 6-l
+36--15-sp, 4-l, 1-$, 1-o, 1-$, 2-o, 3-$, 2-o, 1-$, 1-o, 1-$, 4-l
+37--18-sp, 2-l, 1-$, 2-o, 5-$, 2-o, 1-$, 2-l
+38--18-sp, 2-l, 1-$, 4-o, 1-$, 4-o, 1-$, 2-l
+39--18-sp, 15-l
+40--16-sp, 19-l
+```
+
+---
+
+*1. [Source](https://www.tandfonline.com/doi/abs/10.1080/08832323.1957.10117087)*
+        </code>
+    </pre>
+    <div class="solution" id="1-solution"></div>
+</div>           
             </main>
         </section>
         
