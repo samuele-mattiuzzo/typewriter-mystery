@@ -1,3 +1,4 @@
 *.vscode*
 *.DS_store*
 *.py[co]*
+*src/_index.html*

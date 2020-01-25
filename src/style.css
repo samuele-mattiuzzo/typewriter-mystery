@@ -53,24 +53,24 @@
 }
 
 /* The viewer section */
-#grid-container > main > #viewer {
+#grid-container > main > .viewer {
     display: none;
 }
 
-#grid-container > main > #viewer > pre > .original,
-#grid-container > main > #viewer > .solution {
+.original,
+.solution {
     margin: 0 auto;
     padding: 20px 10px;
     text-align: left;
     width: 60%
 }
-#grid-container > main > #viewer > pre > .original {
+.original {
     background-color: #eee;
     border: 1px solid #999;
     display: block;
 }
 
-#grid-container > main > #viewer > .solution {
+.solution {
     display: none;
     font-weight: bolder;
     letter-spacing: .50em;
@@ -78,6 +78,6 @@
 }
 
 /* Letters and their colours. TODO: make them dynamic based on the problems */
-#grid-container > main > #viewer > .solution > span.l { color: #665166; }
-#grid-container > main > #viewer > .solution > span.s { color: #100; }
-#grid-container > main > #viewer > .solution > span.o { color: #16474E; }
+.solution > span.l { color: #665166; }
+.solution > span.s { color: #100; }
+.solution > span.o { color: #16474E; }
